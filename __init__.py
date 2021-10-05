@@ -9,11 +9,12 @@ class Calculator(MycroftSkill):
     @intent_file_handler('calculator.intent')
     def handle_calculator(self, message):
         self.log.info("maessage: %s", message.data.get('utterance'))
-        self.log.info("equation: %s", message.data.get('equation'))
+        self.log.info("number1: %s", message.data.get('number1'))
+        self.log.info("number2: %s", message.data.get('number2'))
         self.speak_dialog('not_implemented')
 
     @intent_file_handler('sum.intent')
-    def handle_calculator(self, message):
+    def handle_sum(self, message):
         numbers = extract_numbers(message.data.get('numbers'))
         self.log.info("maessage: %s", numbers)
         answer = sum(numbers)

@@ -1,1 +1,1 @@
-(calculate | what is) {{equation}}
+(calculate | what is) {{number1}} + {{number2}}
